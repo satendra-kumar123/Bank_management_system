@@ -1,1 +1,1 @@
-const dbName = "Bank-management-system"
+export const dbName = "Bank-management-system"
