@@ -1,5 +1,7 @@
+// signup and login routes
+
 import { Router } from "express";
-import { userRegister } from "../controllers/user.controller.js";
+import { userRegister } from "../controllers/auth.controller.js";
 const router = Router()
 
 router.route("/userRegister").post(userRegister)
