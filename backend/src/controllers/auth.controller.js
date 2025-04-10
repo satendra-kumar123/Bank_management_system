@@ -2,13 +2,8 @@
 
 const userRegister = async function (req, res) {
     try {
-        res.status(200).json({
-            message: "ok",
-            para: "this is the second ok , ok "
-        })
-        // console.log(res)
-        // console.log(req)
-    } catch (error) {
+        const {username , email , password, phoneNO, address} =  req.body
+    } catch (error) {        
         console.log(error)
     }
 }
