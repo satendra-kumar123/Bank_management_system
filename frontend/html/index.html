@@ -4,28 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!-- nav bar started-->
     <header>
         <div class="logo">
-            <img src="" alt="this is the bank logo">
+            <img src="../assets/logo.jpg" alt="this is the bank logo" height="100px">
         </div>
 
         <div class="links">
-            <a href="./about.html">About</a>
-            <a href="">Accounts Detail</a>
-            <a href="./transactionHistory.html">Transaction History</a>
-            <a href="">Open a Account</a>
-        </div>
-        <div class="profile-icon">
-            <img src="" alt="profile">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
         </div>
     </header>
     <!--  nav bar closed  -->
 
-    <main class="hero-section">
-        
+    <main>
+        <div class="hero-section">
+            <div>
+                <h1>Your Trust. Your Future.</h1>
+            </div>
+            <div>
+                <p>Building a secure financial foundation for tomorrow.</p>
+            </div>
+            <div>
+                <button onclick="window.location.href='./create-account.html'">Open Account</button>
+                <button onclick="window.location.href='./login.html'">Login</button>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assets/user.png" height="50px" alt="">
+                <h3>Account Creation</h3>
+                <p>Open new bank account quickly and easily.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/money-withdraw.png" height="50px" alt="">
+                <h3>Easy Deposits & Withdrawals</h3>
+                <p>Deposite and withdraw funds without nassic.</p>
+            </div>
+            <div class="card">
+                <img src="../assets/check-balance.png" height="50px" alt="">
+                <h3>Balance Check Anytime</h3>
+                <p>view your account balance at a any moment</p>
+            </div>
+            <div class="card">
+                <img src="../assets/google-docs.png" height="50px" alt="">
+                <h3>Detailed Account Statements</h3>
+                <p>Access comprehensive statement for your account.</p>
+            </div>
+        </div>
     </main>
+    <footer>
+        <div>
+            <p>privacy policy</p>
+        </div>
+        <div>
+            <p>Terms of Services</p>
+        </div>
+        <div>
+            <p>Contact</p>
+        </div>
+        <div>
+            <p>&copy; 2023 Bank Management System</p>
+        </div>
+    </footer>
 </body>
 </html>

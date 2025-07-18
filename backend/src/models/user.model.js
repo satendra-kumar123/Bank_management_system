@@ -30,16 +30,6 @@ const userSchema = new mongoose.Schema({
         trim: true,
         lowercase: true,
     },
-    addharNO: {
-        type: Number,
-        required: [true, " Aadhar number is required"],
-        unique: true
-    },
-    PAN: {
-        type: String,
-        required: [true,"PAN card is required"],
-        unique: true
-    },
     address: {
         type: String,
         required: [true, "Address is required"],

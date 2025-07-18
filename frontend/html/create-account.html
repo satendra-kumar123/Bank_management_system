@@ -8,23 +8,26 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <div>logo</div>
+        <div class="logo">
+            <img src="../assets/logo.jpg" alt="this is the bank logo" height="100px">
         </div>
-        <div id="links">
-            <a href="#">About</a>
-            <a href="#">Transaction</a>
-            <a href="#">Contact us</a>
-            <a href="#">Account Open</a>
-        </div>
-        <div id="profile">
-            <div>profile</div>
+
+        <div class="links">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
         </div>
     </header>
-
-    <main>
-        <div class="card"></div>
-    </main>
-    <script src="../js/create-account.js"></script>
+    <h1>Create your Account</h1>
+   <form class="user-form">
+        <input type="text" placeholder="Enter your first name" required>
+        <input type="text" placeholder="Enter your last name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <input type="number" placeholder="Enter your mobile number" required>
+        <input type="text" placeholder="Enter your address" required >
+        <input type="file" placeholder="choose your photo" required>
+        <button type="submit">Submit</button>
+   </form>
 </body>
 </html>
