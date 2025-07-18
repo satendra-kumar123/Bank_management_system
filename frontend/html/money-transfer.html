@@ -1,22 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>transfer money</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Transfer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f5f9fc;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0d47a1;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #08306b;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../assets/logo.jpg" alt="this is the bank logo" height="100px">
-        </div>
+  <div class="container">
+    <h2>Transfer Money</h2>
+    <form id="transferForm">
+      <label for="recipient">Recipient Account Number</label>
+      <input type="text" id="recipient" name="recipient" required />
 
-        <div class="links">
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-        </div>
-    </header>
+      <label for="amount">Amount (₹)</label>
+      <input type="number" id="amount" name="amount" required />
+
+      <label for="message">Message (optional)</label>
+      <input type="text" id="message" name="message" />
+
+      <button type="submit">Transfer Now</button>
+      <div class="success-message" id="successMsg"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('transferForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const recipient = document.getElementById('recipient').value;
+      const amount = document.getElementById('amount').value;
+
+      if (recipient && amount) {
+        // This is where you can call your backend API
+        document.getElementById('successMsg').innerText = `₹${amount} transferred to account ${recipient} successfully!`;
+      }
+    });
+  </script>
 </body>
 </html>
